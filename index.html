@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SSS — Santino Sostersich Studio. An independent studio focused on technology, software and digital development.">
+  <title>SSS — Santino Sostersich Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glow glow-a" aria-hidden="true"></div>
+  <div class="glow glow-b" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#home" data-target="home" aria-label="SSS, go to Home">SSS<span>.</span></a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span>
+    </button>
+
+    <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+      <ul role="tablist">
+        <li><button class="nav-link" role="tab" data-target="home" id="tab-home" aria-controls="home">Home</button></li>
+        <li><button class="nav-link" role="tab" data-target="info" id="tab-info" aria-controls="info">Info</button></li>
+        <li><button class="nav-link" role="tab" data-target="help" id="tab-help" aria-controls="help">Help</button></li>
+      </ul>
+      <div class="status"><span class="dot" aria-hidden="true"></span>Independent Studio</div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="view" id="home" role="tabpanel" aria-labelledby="tab-home">
+      <div class="view-inner center">
+        <h1 class="hero-title">SSS<span class="accent">.</span></h1>
+        <p class="hero-sub">Santino Sostersich Studio</p>
+        <p class="lead">Exploring technology, developing ideas and building digital experiences.</p>
+        <div class="actions">
+          <button class="btn btn-primary" data-target="info">Explore Studio</button>
+          <button class="btn btn-ghost" data-target="help">Get Help</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" id="info" role="tabpanel" aria-labelledby="tab-info" hidden>
+      <div class="view-inner center">
+        <h2 class="heading">Technology. Without limits.</h2>
+        <p class="lead">SSS is an independent studio focused on technology, software, experimentation and digital development.</p>
+
+        <ul class="grid">
+          <li class="card" tabindex="0">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/github.svg" alt="" width="40" height="40" loading="lazy">
+            <span>GitHub</span>
+          </li>
+          <li class="card" tabindex="0">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/linux.svg" alt="" width="40" height="40" loading="lazy">
+            <span>Linux</span>
+          </li>
+          <li class="card" tabindex="0">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/fedora.svg" alt="" width="40" height="40" loading="lazy">
+            <span>Fedora</span>
+          </li>
+          <li class="card" tabindex="0">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/ubuntu.svg" alt="" width="40" height="40" loading="lazy">
+            <span>Ubuntu</span>
+          </li>
+          <li class="card" tabindex="0">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/windows.svg" alt="" width="40" height="40" loading="lazy">
+            <span>Windows</span>
+          </li>
+        </ul>
+
+        <p class="tagline">SOFTWARE · DEVELOPMENT · TECHNOLOGY</p>
+      </div>
+    </section>
+
+    <section class="view" id="help" role="tabpanel" aria-labelledby="tab-help" hidden>
+      <div class="view-inner center">
+        <h2 class="heading">Something is in progress.</h2>
+        <p class="lead">We're working hard to bring you something great. Our support center is currently under development. Stay tuned.</p>
+        <div class="wip" role="status"><span class="dot" aria-hidden="true"></span>WORK IN PROGRESS</div>
+        <div class="actions">
+          <button class="btn btn-primary" data-target="home">Back to Home</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 SSS — Santino Sostersich Studio</span>
+    <span>DESIGNED WITH PURPOSE.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
