@@ -181,7 +181,18 @@
     clearTimeout(hideTimer);
     hideTimer = setTimeout(() => { if (!holding) nav.classList.remove("show"); }, 4000);
   }
-  ["keydown", "mousemove", "pointerdown", "wheel", "touchstart", "scroll"].forEach(ev => addEventListener(ev, reveal, { passive: true }));
+  // Ignore the synthetic mousemove some browsers fire right after load, so the menu starts hidden
+  const loadedAt = performance.now();
+  let lastX = -1, lastY = -1;
+  function onInteract(e) {
+    if (performance.now() - loadedAt < 900) return;
+    if (e.type === "mousemove") {
+      if (e.clientX === lastX && e.clientY === lastY) return;
+      lastX = e.clientX; lastY = e.clientY;
+    }
+    reveal();
+  }
+  ["keydown", "mousemove", "pointerdown", "wheel", "touchstart", "scroll"].forEach(ev => addEventListener(ev, onInteract, { passive: true }));
   nav.addEventListener("pointerenter", () => { holding = true; reveal(); });
   nav.addEventListener("pointerleave", () => { holding = false; reveal(); });
   nav.addEventListener("focusin", () => { holding = true; reveal(); });
