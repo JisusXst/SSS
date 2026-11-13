@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SSS — Santino Sostersich Studio. An independent studio focused on technology, software and digital development.">
+  <meta name="description" content="SSS — Santino Sostersich Studio. An independent technology and creative studio.">
+  <meta name="theme-color" content="#26292f">
   <title>SSS — Santino Sostersich Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,87 +12,87 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="glow glow-a" aria-hidden="true"></div>
-  <div class="glow glow-b" aria-hidden="true"></div>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="floaters" id="floaters" aria-hidden="true"></div>
 
-  <header class="nav">
-    <a class="brand" href="#home" data-target="home" aria-label="SSS, go to Home">SSS<span>.</span></a>
-
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
-      <span></span><span></span>
-    </button>
-
-    <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
-      <ul role="tablist">
-        <li><button class="nav-link" role="tab" data-target="home" id="tab-home" aria-controls="home">Home</button></li>
-        <li><button class="nav-link" role="tab" data-target="info" id="tab-info" aria-controls="info">Info</button></li>
-        <li><button class="nav-link" role="tab" data-target="help" id="tab-help" aria-controls="help">Help</button></li>
+  <header class="nav" id="nav">
+    <a class="brand" href="#home" data-view="home" aria-label="SSS">SSS</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#home" data-view="home" data-i18n="nav.home">Home</a></li>
+        <li><a href="#info" data-view="info" data-i18n="nav.info">Info</a></li>
+        <li><a href="#help" data-view="help" data-i18n="nav.help">Help</a></li>
       </ul>
-      <div class="status"><span class="dot" aria-hidden="true"></span>Independent Studio</div>
     </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div>
   </header>
 
-  <main>
-    <section class="view" id="home" role="tabpanel" aria-labelledby="tab-home">
-      <div class="view-inner center">
-        <h1 class="hero-title">SSS<span class="accent">.</span></h1>
-        <p class="hero-sub">Santino Sostersich Studio</p>
-        <p class="lead">Exploring technology, developing ideas and building digital experiences.</p>
-        <div class="actions">
-          <button class="btn btn-primary" data-target="info">Explore Studio</button>
-          <button class="btn btn-ghost" data-target="help">Get Help</button>
+  <main id="main">
+    <!-- HOME -->
+    <section class="view" id="home" data-title="Home">
+      <div class="hero">
+        <div class="hero-inner" id="heroInner">
+          <h1>SSS</h1>
+          <p class="hero-sub">Santino Sostersich Studio</p>
+        </div>
+        <span class="scroll-hint" aria-hidden="true"><i></i></span>
+      </div>
+
+      <div class="story" id="story">
+        <div class="stage">
+          <article class="step on" data-step="0">
+            <div class="cube-wrap" aria-hidden="true"><div class="cube big"></div></div>
+            <div class="panel"><h2 data-i18n="c1t">What is SSS?</h2><p data-i18n="c1p"></p></div>
+          </article>
+          <article class="step" data-step="1">
+            <div class="cube-wrap" aria-hidden="true"><div class="cube big gray"></div></div>
+            <div class="panel"><h2 data-i18n="c2t">What SSS does</h2><p data-i18n="c2p"></p></div>
+          </article>
+          <article class="step" data-step="2">
+            <div class="cube-wrap" aria-hidden="true"><div class="cube big sun"></div></div>
+            <div class="panel"><h2 data-i18n="c3t">Creativity and experience</h2><p data-i18n="c3p"></p></div>
+          </article>
+          <article class="step" data-step="3">
+            <div class="cube-wrap" aria-hidden="true"><div class="cube big gray"></div></div>
+            <div class="panel"><h2 data-i18n="c4t">Opportunities and collaboration</h2><p data-i18n="c4p"></p></div>
+          </article>
+          <article class="step" data-step="4">
+            <div class="cube-wrap" aria-hidden="true"><div class="cube big sun"></div></div>
+            <div class="panel"><h2 data-i18n="c5t">Passion for technology</h2><p data-i18n="c5p"></p></div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="view" id="info" role="tabpanel" aria-labelledby="tab-info" hidden>
-      <div class="view-inner center">
-        <h2 class="heading">Technology. Without limits.</h2>
-        <p class="lead">SSS is an independent studio focused on technology, software, experimentation and digital development.</p>
-
-        <ul class="grid">
-          <li class="card" tabindex="0">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/github.svg" alt="" width="40" height="40" loading="lazy">
-            <span>GitHub</span>
-          </li>
-          <li class="card" tabindex="0">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/linux.svg" alt="" width="40" height="40" loading="lazy">
-            <span>Linux</span>
-          </li>
-          <li class="card" tabindex="0">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/fedora.svg" alt="" width="40" height="40" loading="lazy">
-            <span>Fedora</span>
-          </li>
-          <li class="card" tabindex="0">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/ubuntu.svg" alt="" width="40" height="40" loading="lazy">
-            <span>Ubuntu</span>
-          </li>
-          <li class="card" tabindex="0">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/windows.svg" alt="" width="40" height="40" loading="lazy">
-            <span>Windows</span>
-          </li>
-        </ul>
-
-        <p class="tagline">SOFTWARE · DEVELOPMENT · TECHNOLOGY</p>
+    <!-- INFO -->
+    <section class="view page" id="info" data-title="Info" hidden>
+      <div class="page-inner">
+        <h1 data-i18n="info.title">About the studio</h1>
+        <p class="lead" data-i18n="info.lead"></p>
+        <div class="cards">
+          <article class="panel"><h2 data-i18n="info.t1">The creator</h2><p data-i18n="info.p1"></p></article>
+          <article class="panel"><h2 data-i18n="info.t2">Interests</h2><p data-i18n="info.p2"></p></article>
+          <article class="panel"><h2 data-i18n="info.t3">Environment</h2><p data-i18n="info.p3"></p></article>
+          <article class="panel"><h2 data-i18n="info.t4">Approach</h2><p data-i18n="info.p4"></p></article>
+        </div>
       </div>
     </section>
 
-    <section class="view" id="help" role="tabpanel" aria-labelledby="tab-help" hidden>
-      <div class="view-inner center">
-        <h2 class="heading">Something is in progress.</h2>
-        <p class="lead">We're working hard to bring you something great. Our support center is currently under development. Stay tuned.</p>
-        <div class="wip" role="status"><span class="dot" aria-hidden="true"></span>WORK IN PROGRESS</div>
-        <div class="actions">
-          <button class="btn btn-primary" data-target="home">Back to Home</button>
-        </div>
+    <!-- HELP -->
+    <section class="view page" id="help" data-title="Help" hidden>
+      <div class="page-inner">
+        <h1 data-i18n="help.title">Support is in progress</h1>
+        <p class="lead" data-i18n="help.lead"></p>
+        <div class="wip" role="status"><span class="dot" aria-hidden="true"></span><span data-i18n="help.wip">WORK IN PROGRESS</span></div>
+        <div><a class="btn" href="#home" data-view="home" data-i18n="help.back">Back to Home</a></div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <span>© 2026 SSS — Santino Sostersich Studio</span>
-    <span>DESIGNED WITH PURPOSE.</span>
-  </footer>
+  <footer class="footer">© 2026 SSS — Santino Sostersich Studio</footer>
 
   <script src="script.js"></script>
 </body>
